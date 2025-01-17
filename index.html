@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VS Code Navbar and Content Example</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #1e1e1e;
+      color: #dcdcdc;
+      line-height: 1.6;
+    }
+
+    /* Navbar Styling */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      background-color: #0e1d2f;
+      border-bottom: 2px solid #2e2e2e;
+    }
+
+    .navbar-logo {
+      display: flex;
+      align-items: center;
+      color: #ffffff;
+    }
+
+    .navbar-logo img {
+      width: 30px;
+      height: 30px;
+      margin-right: 10px;
+    }
+
+    .navbar-logo span {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .navbar-links {
+      display: flex;
+      gap: 20px;
+    }
+
+    .navbar-links a {
+      color: #dcdcdc;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1rem;
+    }
+
+    .navbar-links a:hover {
+      color: #00aaff;
+    }
+
+    .navbar-right {
+      display: flex;
+      align-items: center;
+    }
+
+    .navbar-right i {
+      color: #dcdcdc;
+      font-size: 1.3rem;
+    }
+
+    .search-bar {
+      display: flex;
+      align-items: center;
+      background-color: #2e2e2e;
+      border-radius: 20px;
+      margin-left: 20px;
+      padding: 5px 10px;
+    }
+
+    .search-bar input {
+      background-color: transparent;
+      border: none;
+      color: #dcdcdc;
+      padding: 5px;
+      outline: none;
+      width: 200px;
+    }
+
+    .search-bar input::placeholder {
+      color: #8a8a8a;
+    }
+
+    .download-button {
+      color: #00aaff;
+      padding: 10px 20px;
+      border-radius: 20px;
+      background-color: transparent;
+      text-decoration: none;
+      border: 1px solid #00aaff;
+      margin-left: 20px;
+    }
+
+    .download-button:hover {
+      background-color: #00aaff;
+      color: #ffffff;
+    }
+
+    /* Content Styling */
+    #content {
+      text-align: center;
+      padding: 50px 20px;
+    }
+
+    .rocket-symbol {
+      font-size: 4rem;
+      margin-bottom: 20px;
+    }
+
+    .buttons button {
+      padding: 15px 30px;
+      margin: 20px;
+      border-radius: 50px;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .download-btn {
+      background-color: #0078d4;
+      color: white;
+      border: none;
+    }
+
+    .download-btn:hover {
+      background-color: #005fa3;
+    }
+
+    .copilot-btn {
+      background-color: white;
+      color: black;
+      border: 2px solid #0078d4;
+    }
+
+    .copilot-btn:hover {
+      background-color: #0078d4;
+      color: white;
+    }
+
+    /* Footer Links */
+    .links a {
+      color: #00aaff;
+      text-decoration: none;
+      font-size: 1rem;
+      margin: 0 15px;
+    }
+
+    .links a:hover {
+      text-decoration: underline;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="navbar-logo">
+      <img src="https://code.visualstudio.com/assets/images/code-stable.png" alt="VS Code Logo">
+      <span>Visual Studio Code</span>
+    </div>
+
+    <div class="navbar-links">
+      <a href="#">Docs</a>
+      <a href="#">Updates</a>
+      <a href="#">Blog</a>
+      <a href="#">API</a>
+      <a href="#">Extensions</a>
+      <a href="#">GitHub Copilot</a>
+    </div>
+
+    <div class="navbar-right">
+      <i class="fas fa-sun" style="padding-right:10px;"></i>
+      <div class="search-bar">
+        <i class="fas fa-search"></i>
+        <input type="text" placeholder="Search..." />
+      </div>
+      <a href="#" class="download-button">Download</a>
+    </div>
+  </div>
+
+  <!-- Content -->
+  <div id="content">
+    <!-- Rocket symbol -->
+   
+  
+    <!-- GitHub Copilot Free text with link -->
+    <div style="display: inline-block;">
+      <span class="rocket-symbol" style="font-size: 1rem; margin-bottom: 20px;">🚀</span>
+      <span>Get</span>
+      <a href="https://github.com/features/copilot" style="color: #00aaff;">GitHub Copilot Free </a>in VS Code!
+      <h1 style="font-size: 4rem; color: #ffffff; font-weight: 500; margin-bottom: 20px; line-height: 1.2;">Your code editor.</h1>
+      <h1 style="font-size: 4rem; color: #ffffff; font-weight: 500; margin-bottom: 20px; line-height: 1.2;">Redefined with AI.</h1>
+    </div>
+  
+    <!-- Buttons -->
+    <div class="buttons">
+      <button class="download-btn">Download for Windows</button>
+      <button class="copilot-btn">Get Copilot Free</button>
+    </div>
+  
+    <!-- Links for other platforms -->
+    <div class="links">
+      <a href="#web-insiders-edition">Web, Insiders edition</a> or
+      <a href="#other-platforms">Other platforms</a>
+    </div>
+  </div>
+
+<!-- Video -->
+<div style="text-align: center; margin-top: 70px; background-image: url('images/hero-background.webp'); background-size: 10px; background-repeat: repeat;">
+  <video width="80%" controls autoplay muted>
+    <source src="https://code.visualstudio.com/assets/home/hero-dark-lg.webm" type="video/webm">
+    Your browser does not support the video tag.
+  </video>
+</div>
+
+
+  <div class="container mt-5">
+    <div class="row g-3">
+      <!-- Card 1 -->
+      <div class="col-md-4">
+        <div class="card h-100 text-white bg-dark">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Choose the model that works for you</h5>
+            <p class="card-text">Pick the model that works best for your project and team, including GPT 4o and Claude Sonnet.</p>
+          </div>
+          <div class="image-container" style="background-color: white; height: 200px;">
+            <img src="images/img1.webp" class="card-img-top" alt="Image 1" style="height: 100%; object-fit: cover;">
+          </div>
+        </div>
+      </div>
+      <!-- Card 2 -->
+      <div class="col-md-4">
+        <div class="card h-100 text-white bg-dark">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">An expert on your codebase</h5>
+            <p class="card-text">Copilot locally indexes your codebase to understand what’s relevant and supplements that context to interactions with Copilot.</p>
+          </div>
+          <div class="image-container" style="background-color: white; height: 200px;">
+            <img src="images/img2.webp" class="card-img-top" alt="Image 2" style="height: 100%; object-fit: cover;">
+          </div>
+        </div>
+      </div>
+      <!-- Card 3 -->
+      <div class="col-md-4">
+        <div class="card h-100 text-white bg-dark">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Personalized to your needs</h5>
+            <p class="card-text">Copilot works the way you do. Customize Copilot's prompts with details about your team's workflows, tools, and projects.</p>
+          </div>
+          <div class="image-container" style="background-color: white; height: 200px;">
+            <img src="images/img3.webp" class="card-img-top" alt="Image 3" style="height: 100%; object-fit: cover;">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  
+  
+
+</body>
+</html>
